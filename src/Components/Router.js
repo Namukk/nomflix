@@ -1,4 +1,5 @@
 import React from "react";
+import Header from "./Header";
 import {
   BrowserRouter as Router,
   Route,
@@ -11,6 +12,7 @@ import Search from "../Routes/Search";
 
 export default () => (
   <Router>
+    <Header />
     <Switch>
       <Route exact path="/" component={Home} />
       {/* exact를 붙여줘야 정확히 일치하는 것만 인정. ex) /login, /course, /join 다 /로 인식됨. */}
