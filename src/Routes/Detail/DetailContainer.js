@@ -32,24 +32,20 @@ export default class extends React.Component {
     let result = null;
     try {
       if (isMovie) {
-        ({
-          data: { result },
-        } = await moviesApi.movieDetail(parsedId));
+        ({ data: result } = await moviesApi.movieDetail(parsedId));
+        //양쪽 끝에 ()를 붙인 것. = 앞에 const= 붙인 것 let으로 지정해준 result에 덮어 써야 때문에 const를 쓸 수 없음.
       } else {
-        ({
-          data: { result },
-        } = await tvApi.tvDetail(parsedId));
+        ({ data: result } = await tvApi.tvDetail(parsedId));
       }
     } catch {
       this.setState({ error: "Can't find anything." });
     } finally {
-      this.setState({ loading: false });
+      this.setState({ loading: false, result });
     }
   }
 
   render() {
     const { result, error, loading } = this.state;
-    console.log(this.state);
     return <DetailPresenter result={result} error={error} loading={loading} />;
   }
 }
