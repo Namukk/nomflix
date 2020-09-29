@@ -30,6 +30,7 @@ const ImageContainer = styled.div`
   &:hover {
     ${Image} {
       opacity: 0.3;
+      transform: scale(1.2, 1.2);
     }
     ${Rating} {
       opacity: 1;
