@@ -24,7 +24,7 @@ export default class extends React.Component {
       },
       history: { push },
     } = this.props; //parseInt(id) id라는 string을 숫자로 변환 if it is not number it return NaN.
-    const { isMovie } = this.state;
+    const { isMovie } = this.state; 
     const parsedId = parseInt(id);
     if (isNaN(parsedId)) {
       return push("/");
