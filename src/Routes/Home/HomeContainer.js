@@ -13,8 +13,6 @@ export default class extends React.Component {
   };
 
   async componentDidMount() {
-
-    console.log(nowPlaying)
     try {
       const {
         data: { results: nowPlaying },
@@ -41,8 +39,6 @@ export default class extends React.Component {
       });
     }
   }
-
-  
 
   render() {
     const { nowPlaying, upcoming, popular, error, loading } = this.state;
