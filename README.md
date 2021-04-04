@@ -2,6 +2,8 @@
 
 Learning React and ES6 by building a Movie Discovery App
 
+** Movie information **
+
 ## Screens
 
 - [x] Home(Movies)
